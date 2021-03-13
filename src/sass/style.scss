@@ -1,0 +1,53 @@
+@import 'libs/bootstrap-reboot.min';
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.5em;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #0D0D2B;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@import 'blocks/header';
+@import 'blocks/intro';
+@import 'blocks/whyCrappo';
+@import 'blocks/trade';
+
+
+
+
+
+
+$maxWidth: 1200px;
+
+@mixin adaptiveFont($maxSize, $minSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin adaptiveLineHeight($maxSize, $minSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
