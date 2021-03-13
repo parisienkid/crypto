@@ -1,0 +1,184 @@
+.trade {
+    padding-top: 100px;
+    &__title {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 150%;
+        text-align: center;
+    }
+    &__subtitle {
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+        color: #E0E0E0;
+        text-align: center;
+        margin-top: 24px;
+    }
+    &__check {
+        padding-bottom: 219px;
+    }
+    &__currencies {
+        background: linear-gradient(180deg, #F8F9FB 0%, #FAFBFF 100%);
+        width: 100%;
+        padding-top: 316px;
+        padding-bottom: 100px;
+        position: relative;
+    }
+    &__calc {
+        position: absolute;
+        left: 50%;
+        top: -475px;
+        width: 942px;
+        min-height: 371px;
+        transform: translateX(-50%);
+        background: #FBFCFE;
+        box-shadow: 0px 20px 200px rgba(57, 23, 119, 0.05);
+        border-radius: 16px;
+        padding: 48px;
+    }
+    &__hashrate {
+        border: none;
+        border-bottom: 1px solid #E0E0E0;
+        background-color: inherit;
+        width: 403px;
+        max-width: 403px;
+        color: #000;
+        outline: none;
+        &::placeholder {
+            color: #000;
+        }
+    }
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__th {
+        border: none;
+        position: relative;
+        border-bottom: 1px solid #E0E0E0;
+        background-color: inherit;
+        padding: 7px 0;
+        color: #000;
+        outline: none;
+        max-width: 120px;
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        align-items: center;
+        &::placeholder {
+            color: #000;
+        }
+    }
+    &__dropdown {
+        position: absolute;
+        max-height: 220px;
+        bottom: -216px;
+        width: 100%;
+        border: 1px solid #E0E0E0;
+        padding: 5px;
+        text-align: center;
+        &-item {
+            color: #000;
+            width: 100%;
+            font-size: 16px;
+            padding: 5px 0;
+            &:hover {
+                background-color: #E0E0E0;
+            }
+        }
+    }
+    &__calculate {
+        padding: 16px 32px;
+        border: 1px solid #3671E9;
+        background: #3671E9;
+        border-radius: 32px;
+        transition: .2s;
+        outline: none;
+        &:hover {
+            border: 1px solid #3671E9;
+            background-color: #0D0D2B;
+        }
+    }
+    &__estimated {
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #3671E9;
+        margin-top: 100px;
+    }
+    &__eth {
+        font-size: 32px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        color: #0D0D2B;
+        font-weight: bold;
+        margin-top: 16px;
+        span {
+            color: #3671E9;
+        }
+    }
+    &__revenue {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.01em;
+        color: #828282;
+        margin-top: 4px;
+    }
+    .coins {
+        margin-top: 64px;
+        display: flex;
+        justify-content: space-between;
+
+        &__item {
+            text-align: center;
+            padding: 48px 24px;
+            min-height: 433px;
+            background: #FFFFFF;
+            width: 370px;
+            border-radius: 16px;
+            transition: .4s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:hover {
+                background: #2B076E;
+
+            }
+        }
+        &__title {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 48px;
+            margin-top: 48px;
+            color: #0D0D2B;
+            display: flex;
+            align-items: center;
+            span {
+                margin-left: 8px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 48px;
+                text-align: center;
+                color: #BDBDBD;
+                opacity: 0.7;
+                display: block;
+            }
+        }
+        &__subtitle {
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+            letter-spacing: 0.01em;
+            color: #828282;
+            margin-top: 16px;
+        }
+        &__button {
+            margin-top: 25px;
+        }
+    }
+    .bluecolor {
+        color: #0D0D2B;
+    }
+}

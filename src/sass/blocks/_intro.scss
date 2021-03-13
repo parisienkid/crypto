@@ -2,6 +2,8 @@
     padding-top: 243px;
     padding-bottom: 139px;
     position: relative;
+    overflow: hidden;
+    min-height: 100vh;
     &__content {
         display: flex;
         flex-direction: column;
