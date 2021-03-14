@@ -1,13 +1,17 @@
 .intro {
-    padding-top: 243px;
-    padding-bottom: 139px;
+    padding: 139px 0;
     position: relative;
     overflow: hidden;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
     &__content {
         display: flex;
         flex-direction: column;
         width: 588px;
+        @media (max-width: 1200px) {
+            width: 570px;
+        }
     }
     &__sale {
         display: flex;

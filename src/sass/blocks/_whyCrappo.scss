@@ -1,13 +1,17 @@
 .whyCrappo {
-    padding: 100px;
+    padding: 100px 0;
     position: relative;
     overflow: hidden;
     &__numbers {
         display: flex;
         justify-content: space-between;
+        @media (max-width: 1200px) {
+            padding-left: 40px;
+        }
         &-item {
             display: flex;
             align-items: center;
+            width: 30%;
         }
         &-logo {
             margin-right: 28px;
@@ -16,8 +20,12 @@
             font-weight: bold;
             font-size: 40px;
             line-height: 150%;
+            text-align: justify;
+            @media (max-width: 1200px) {
+                font-size: 35px;
+            }
         }
-        &__subtitle {
+        &-subtitle {
             font-size: 16px;
             line-height: 28px;
         }
@@ -46,6 +54,9 @@
         justify-content: space-between;
         margin-top: 150px;
         align-items: center;
+        svg {
+            width: 100%;
+        }
     }
     &__text {
         margin-left: 70px;

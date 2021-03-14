@@ -9,10 +9,18 @@
     font-family: 'Inter', sans-serif;
     z-index: 1000;
     margin-top: 60px;
+    @media (max-width: 1200px) {
+        margin-top: 40px;
+    }
     nav {
         width: 80%;
+        min-width: 1140px;
         margin: 0 auto;
-        max-width: 1200px;
+        max-width: 1140px;
+        @media (max-width: 1200px) {
+            width: 840px;
+            min-width: 840px;
+        }
     }
     ul {
         display: flex;
