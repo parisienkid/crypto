@@ -31,7 +31,10 @@ body {
     margin: 0 auto;
     position: relative;
     @media (max-width: 1200px) {
-        width: 840px;
+        width: 90%;
+    }
+    @media (max-width: 899px) {
+        width: 90%;
     }
 }
 

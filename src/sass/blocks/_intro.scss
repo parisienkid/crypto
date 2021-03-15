@@ -12,6 +12,9 @@
         @media (max-width: 1200px) {
             width: 570px;
         }
+        @media (max-width: 899px) {
+            width: 100%;
+        }
     }
     &__sale {
         display: flex;
@@ -20,6 +23,7 @@
         padding: 4px;
         width: 365px;
         font-size: 16px;
+        z-index: 500;
     }
     &__percent {
         background: #FFFFFF;
@@ -27,6 +31,7 @@
         padding: 4px 16px;
         color: #000;
         font-weight: 600;
+        z-index: 500;
         &-descr {
             padding: 4px 0;
             margin-left: 16px;
@@ -38,6 +43,7 @@
         font-size: 64px;
         line-height: 72px;
         margin-top: 24px;
+        z-index: 500;
     }
     &__subtitle {
         margin-top: 24px;
@@ -45,6 +51,7 @@
         line-height: 28px;
         color: #E0E0E0;
         letter-spacing: 0.01em;
+        z-index: 500;
     }
     &__button {
         margin-top: 32px;
@@ -58,6 +65,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 500;
         &-text {
             font-size: 18px;
             line-height: 150%;      
@@ -67,7 +75,11 @@
         background: linear-gradient(180.09deg, rgba(255, 255, 255, 0) 0.49%, rgba(255, 255, 255, 0.04) 39.06%, rgba(255, 255, 255, 0) 99.92%);
         transform: rotate(-120deg);
         width: 120px;
-        height: 997.88px;
+        height: 80vh;
+        z-index: -1;
+        @media (max-width: 899px) {
+            opacity: 0.6;
+        }
         position: absolute;
     }
     &__bg-item1 {
@@ -80,6 +92,10 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        z-index: 305;
         transform: translateY(-50%);
+        @media (max-width: 899px) {
+            opacity: 0.4;
+        }
     }
 }

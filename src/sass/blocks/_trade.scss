@@ -1,10 +1,16 @@
 .trade {
     padding-top: 100px;
+    @media (max-width: 1200px) {
+        padding-top: 70px;
+    }
     &__title {
         font-weight: bold;
         font-size: 40px;
         line-height: 150%;
         text-align: center;
+        @media (max-width: 899px) {
+            font-size: 30px;
+        }
     }
     &__subtitle {
         font-size: 18px;
@@ -38,6 +44,9 @@
         @media (max-width: 1200px) {
             width: 800px;
         }
+        @media (max-width: 899px) {
+            width: 540px;
+        }
     }
     &__hashrate {
         border: none;
@@ -47,6 +56,9 @@
         max-width: 403px;
         color: #000;
         outline: none;
+        @media (max-width: 899px) {
+            width: 45%;
+        }
         &::placeholder {
             color: #000;
         }
@@ -56,6 +68,9 @@
         justify-content: space-between;
     }
     &__th {
+        @media (max-width: 899px) {
+            width: 15%;
+        }
         border: none;
         position: relative;
         border-bottom: 1px solid #E0E0E0;
@@ -63,7 +78,6 @@
         padding: 7px 0;
         color: #000;
         outline: none;
-        max-width: 120px;
         width: 120px;
         display: flex;
         justify-content: space-between;
@@ -136,6 +150,13 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        @media (max-width: 1200px) {
+            justify-content: space-around;
+        }
+        @media (max-width: 899px) {
+            flex-direction: column;
+            align-items:center;
+        }
         &__item {
             text-align: center;
             padding: 48px 24px;
@@ -150,9 +171,17 @@
             position: relative;
             @media (max-width: 1200px) {
                 &:nth-of-type(3) {
-                    margin-top: 50px;
                     margin: 80px auto 0 auto;
+                    @media (max-width: 1200px) {
+                        margin-top: 40px;
+                    }
+                    @media (max-width: 899px) {
+                        margin-top: 0;
+                    }
                 }
+            }
+            @media (max-width: 899px) {
+                margin-bottom: 30px;
             }
             &:hover {
                 background: #2B076E;
