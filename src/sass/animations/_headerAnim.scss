@@ -1,0 +1,69 @@
+@keyframes firstHeaderSpanAnimOut {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10.5px);
+    }
+}
+
+.firstspanOut {
+    animation: firstHeaderSpanAnimOut .5s forwards;
+}
+
+@keyframes thirdHeaderSpanAnimOut {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10.5px);
+    }
+}
+
+.thirdspanOut {
+    animation: thirdHeaderSpanAnimOut .5s forwards;
+}
+
+@keyframes firstHeaderSpanAnimIn {
+    0% {
+        transform: translateY(10.5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.firstspanIn {
+    animation: firstHeaderSpanAnimIn .5s forwards;
+}
+
+@keyframes thirdHeaderSpanAnimIn {
+    0% {
+        transform: translateY(-10.5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.thirdspanIn {
+    animation: thirdHeaderSpanAnimIn .5s forwards;
+}
+
+@keyframes bgColorMenuRegister {
+    0% {
+        background: rgb(54, 113, 233);
+    }
+    50% {
+        background: rgb(35, 64, 138);
+    }
+    0% {
+        background: rgb(54, 113, 233);
+    }
+}
+
+.bgColorMenuRegister {
+    animation: bgColorMenuRegister 2s infinite;
+}

@@ -1,5 +1,5 @@
 .header {
-    height: 52px;
+    min-height: 52px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -8,9 +8,16 @@
     left: 0;
     font-family: 'Inter', sans-serif;
     z-index: 1000;
-    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 15px;
+    background: #0D0D2B;
+    transition: .3s padding;
     @media (max-width: 1200px) {
-        margin-top: 40px;
+        padding-top: 40px;
+    }
+    @media (max-width: 900px) {
+        padding-top: 15px;
+        border-bottom: 1px solid rgba(242, 242, 242, .3);
     }
     nav {
         width: 80%;
@@ -18,8 +25,7 @@
         margin: 0 auto;
         max-width: 1140px;
         @media (max-width: 1200px) {
-            width: 840px;
-            min-width: 840px;
+            min-width: 90%;
         }
     }
     ul {
@@ -35,6 +41,19 @@
         font-weight: 400;
         font-size: 1em;
         line-height: 1.5em;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        @media (max-width: 899px) {
+            display: none;
+            &:nth-of-type(1) {
+                display: block;
+            }
+            &:nth-of-type(2) {
+                display: block;
+            }
+        }
         &:nth-of-type(1) {
             margin-left: 0;
         }
@@ -59,7 +78,7 @@
                 top: 0;
             }
         }
-        &:last-of-type {
+        &:nth-of-type(8) {
             margin-left: 48px;
             button {
                 background: #3671E9;
@@ -74,6 +93,30 @@
                     background-color: #0D0D2B;
                 }
             }
+        }
+    }
+    &__hamburger {
+        list-style: none;
+        background: inherit;
+        width: 45px;
+        height: 35px;
+        margin-left: auto;
+        position: relative;
+        display: none;
+        justify-content: space-between;
+        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        @media (max-width: 899px) {
+            display: flex;
+        }
+        span {
+            display: block;
+            border-radius: 16px;
+            height: 4px;
+            width: 100%;
+            background-color: #3671E9;;
         }
     }
 }

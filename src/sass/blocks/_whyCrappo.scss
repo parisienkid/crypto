@@ -113,8 +113,7 @@
     &__text {
         margin-left: 70px;
         @media (max-width: 899px) {
-            margin-left: 40px;
-
+            margin-left: 0px;
             margin-top: 55px;
         }
     }
@@ -122,6 +121,9 @@
         font-weight: bold;
         font-size: 40px;
         line-height: 150%;
+        @media (max-width: 899px) {
+            font-size: 34px;
+        }
     }
     &__subtitle {
         font-weight: normal;

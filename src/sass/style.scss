@@ -48,9 +48,12 @@ button {
 }
 
 @import 'blocks/header';
+@import 'blocks/menu';
 @import 'blocks/intro';
 @import 'blocks/whyCrappo';
 @import 'blocks/trade';
+
+@import 'animations/headerAnim';
 
 
 
