@@ -5,6 +5,9 @@
     @media (max-width: 1200px) {
         padding: 70px 0;
     }
+    @media (max-width: 599px) {
+        padding: 35px 0;
+    }
     &__numbers {
         display: flex;
         justify-content: space-between;
@@ -13,6 +16,9 @@
         }
         @media (max-width: 899px) {
             padding-left: 0px;
+        }
+        @media (max-width: 599px) {
+            justify-content: space-around;
         }
         &-item {
             display: flex;
@@ -24,6 +30,9 @@
             @media (max-width: 899px) {
                 align-items: flex-start;
                 flex-direction: column;
+            }
+            @media (max-width: 599px) {
+                width: 86.39px; 
             }
         }
         &-logo {
@@ -55,6 +64,9 @@
                 font-size: 28px;
                 text-align: center;
             }
+            @media (max-width: 599px) {
+                font-size: 22px;
+            }
         }
         &-subtitle {
             font-size: 16px;
@@ -64,9 +76,13 @@
             }
             @media (max-width: 899px) {
                 font-size: 12px;
-                line-height: 23px;
+                line-height: 20px;
                 text-align: center;
             }
+            @media (max-width: 599px) {
+                font-size: 11px;  
+            }
+
         }
     }
     &__bg-line {
@@ -80,6 +96,10 @@
         @media (max-width: 1200px) {
             height: 500px;
         }
+        @media (max-width: 599px) {
+            height: 300px;
+            width: 70px;
+        }
         &2 {
             background: linear-gradient(180deg, rgba(255, 255, 255, 0) 34.75%, rgba(255, 255, 255, 0.1) 100%);
             transform: rotate(-120deg);
@@ -91,12 +111,15 @@
             @media (max-width: 1200px) {
                 height: 600px;
             }
+            @media (max-width: 599px) {
+                height: 300px;
+                width: 70px;
+            }
         }
     }
 
     &__main {
         display: flex;
-        justify-content: space-between;
         margin-top: 150px;
         align-items: center;
         @media (max-width: 1200px) {
@@ -116,6 +139,11 @@
             margin-left: 0px;
             margin-top: 55px;
         }
+        @media (max-width: 899px) {
+            margin-left: 0px;
+            margin-top: 0px;
+            text-align: center;
+        }
     }
     &__title{
         font-weight: bold;
@@ -132,6 +160,10 @@
         letter-spacing: 0.01em;
         color: #E0E0E0;
         margin-top: 25px;
+        @media (max-width: 599px) {
+            font-size: 12px;
+            line-height: 23px;
+        }
     }
     &__button {
         margin-top: 30px;
@@ -144,6 +176,9 @@
         &:hover {
             border: 1px solid #3671E9;
             background-color: #0D0D2B;
+        }
+        @media (max-width: 599px) {
+            margin: 30px auto 0 auto;
         }
     }
 }
