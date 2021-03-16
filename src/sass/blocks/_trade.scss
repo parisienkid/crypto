@@ -257,6 +257,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            svg {
+                z-index: 500;
+            }
         }
         .btc__bg{
             background-color: rgba(249, 170, 75, 1);
