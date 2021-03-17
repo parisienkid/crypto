@@ -39,6 +39,10 @@ body {
     color: #fff;
     transition: .2s background-color;
     border: 1px solid #3671e9;
+    &:hover {
+        border: 1px solid #3671E9;
+        background-color: #0D0D2B;
+    }
 }
 
 .displaynone {

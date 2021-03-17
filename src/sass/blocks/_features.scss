@@ -18,8 +18,13 @@
         display: flex;
         margin-top: 100px;
         justify-content: space-between;
+        align-items: center;
         &:nth-of-type(2) {
             margin-top: 250px;
+            margin-left: -89px;
+        }
+        &:nth-of-type(3) {
+            margin-top: 120px;
         }
     }
     &__item-text {
@@ -30,7 +35,6 @@
         font-size: 32px;
         line-height: 150%;
         color: #FFFFFF;
-        margin-top: 30px;
     }
     &__item-descr {
         font-weight: normal;
@@ -39,12 +43,33 @@
         letter-spacing: 0.01em;
         color: #E0E0E0;
         margin-top: 24px;
+        width: 408px;
     }
     &__item-button {
         margin-top: 32px;
     }
     &__item-illus {
         position: relative;
+        &-bg {
+            width: 610px;
+            height: 334px;
+            background: #35068C;
+            border-radius: 16px;
+            padding: 40px;
+            position: relative;
+            img {
+                position: absolute;
+                left: -150px;
+            }
+            &_first {
+                width: 580px;
+                height: 298px;
+                img {
+                    position: absolute;
+                    left: 40px;
+                }
+            }
+        }
     }
     &__item-sell {
         padding: 24px 16px;
