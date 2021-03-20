@@ -1,0 +1,91 @@
+.mining {
+    padding: 90px 0;
+    background: linear-gradient(180deg, #2B076E 0%, #0D0D2B 100%);
+    overflow: hidden;
+    position: relative;
+    &__form {
+        width: 100%;
+        min-height: 216px;
+        padding: 48px;
+        background: #3671E9;
+        border-radius: 16px;
+        display: flex; 
+        justify-content: space-between;
+        position: relative;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 150%;
+        color: #FFFFFF;
+    }
+    &__descr {
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        margin-top: 16px;
+        max-width: 348px;
+    }
+    &__inputs {
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+    &__input {
+        background-color: inherit;
+        border: none;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        width: 66.66%;
+        &::placeholder {
+            font-size: 16px;
+            line-height: 175%;
+            letter-spacing: 0.01em;
+            color: #FFFFFF;
+        }
+        &:active {
+            outline: none;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    &__submit {
+        width: 152px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+        color: #0D0D2B;
+        padding: 14px;
+        background: #FFFFFF;
+        border-radius: 32px;
+        border: 1px solid #fff;
+        margin-left: 40px;
+        transition: .2s;
+        z-index: 200;
+        &:hover {
+            background-color: inherit;
+            color: #fff;
+        }
+    }
+    &__eth {
+        position: absolute;
+        left:20px;
+        top: 0;
+        z-index: 100;
+    }
+    &__btc {
+        right: 20px;
+        bottom: 0;
+        position: absolute;
+        z-index: 100;
+    }
+}
