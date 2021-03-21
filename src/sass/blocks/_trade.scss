@@ -113,6 +113,9 @@
             color: #000;
         }
     }
+    &__hr {
+        color: #000;
+    }
     &__dropdown {
         position: absolute;
         max-height: 220px;
@@ -168,6 +171,9 @@
         }
         span {
             color: #3671E9;
+        }
+        &TXT {
+            color: #0D0D2B !important;
         }
     }
     &__revenue {
