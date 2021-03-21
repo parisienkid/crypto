@@ -56,8 +56,13 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateRevenue() {
-        tradeETH.textContent = `${tradeOptions.ratio * inputHash.value} `;
-        trade__USD.textContent = `$${tradeETH.textContent * tradeOptions.usdValue}`;
+        if (inputHash.value != '') {
+            tradeETH.textContent = `${tradeOptions.ratio * inputHash.value} `;
+            trade__USD.textContent = `$${tradeETH.textContent * tradeOptions.usdValue}`;
+        } else {
+            tradeETH.textContent = 'Enter data';
+            trade__USD.textContent = '($0)';
+        }
     }
 
     calcButton.addEventListener('click', () => {
@@ -65,7 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     document.body.addEventListener('keydown', (e) => {
-        if (e.code == 'Enter' && (inputHash.value != '')) {
+        if (e.code == 'Enter') {
             updateRevenue();
         }
     });
