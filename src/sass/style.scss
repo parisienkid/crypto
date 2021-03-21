@@ -45,8 +45,25 @@ body {
     }
 }
 
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/intro';
+@import 'blocks/whyCrappo';
+@import 'blocks/trade';
+@import 'blocks/features';
+@import 'blocks/mining';
+@import 'blocks/footer';
+@import 'blocks/modals';
+
+@import 'animations/headerAnim';
+@import 'animations/allAnim';
+
 .displaynone {
     display: none;
+}
+
+.displayblock {
+    display: block;
 }
 
 .container {
@@ -78,16 +95,6 @@ button {
     }
 }
 
-@import 'blocks/header';
-@import 'blocks/menu';
-@import 'blocks/intro';
-@import 'blocks/whyCrappo';
-@import 'blocks/trade';
-@import 'blocks/features';
-@import 'blocks/mining';
-@import 'blocks/footer';
-
-@import 'animations/headerAnim';
 
 
 

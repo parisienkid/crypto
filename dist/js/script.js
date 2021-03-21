@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function updateRevenue() {
         if (inputHash.value != '') {
-            tradeETH.textContent = `${(tradeOptions.ratio * inputHash.value).toFixed(4)} ETH`;
+            tradeETH.textContent = `${(tradeOptions.ratio * inputHash.value).toFixed(2)} ETH`;
             trade__USD.textContent = `$${(tradeETH.textContent.replace(/ETH/i, '')  * tradeOptions.usdValue).toFixed()}`;
         } else {
             tradeETH.textContent = 'Enter data';
@@ -146,5 +146,73 @@ window.addEventListener('DOMContentLoaded', () => {
 
     piano(footerLinks, footerResources);
     piano(footerResources, footerLinks);
+
+    // modal
+
+    const modalEmail = document.querySelector('.modal__email');
+
+    function showEmailModal() {
+        modalEmail.classList.add('displayblock');
+        modalEmail.classList.add('opacityIn');
+        setTimeout(() => {
+            modalEmail.classList.remove('opacityIn');
+            modalEmail.classList.add('opacityOut');
+            setTimeout(() => {
+                modalEmail.classList.remove('displayblock');
+                modalEmail.classList.remove('opacityOut');
+            }, 1000);
+        }, 4000);
+    }
+
+
+    // form
+    
+    const forms = document.querySelectorAll('form');
+
+    forms.forEach(item => {
+        postData(item);
+    });
+
+    const message = {
+        access: 'Thank you for subscribing to our newsletter!',
+        fail: 'Ooops, something went wrong',
+    }
+
+    function postData(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            console.log(formData);
+
+            const obj = {};
+            formData.forEach(function(value, key){
+                obj[key] = value;
+            });
+
+            fetch('server.php', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify(obj),
+            })
+            .then((data) => {
+                modalEmail.textContent = message.access;
+                showEmailModal();
+                
+            })
+            .catch(() => {
+                modalEmail.textContent = message.fail;
+                showEmailModal();
+            })
+            .finally(() => {
+                form.reset();
+            });
+
+            
+        });
+    }
 
 });

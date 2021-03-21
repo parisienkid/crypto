@@ -1,0 +1,25 @@
+.opacityIn {
+    animation: opacityIn 1s forwards;
+}
+
+.opacityOut {
+    animation: opacityOut 1s forwards;
+}
+
+@keyframes opacityIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacityOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
