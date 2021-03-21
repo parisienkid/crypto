@@ -184,24 +184,25 @@ window.addEventListener('DOMContentLoaded', () => {
 
             const formData = new FormData(form);
 
-            console.log(formData);
+            const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
-            const obj = {};
-            formData.forEach(function(value, key){
-                obj[key] = value;
-            });
+            const postData = async (url, data) => {
+                
+                const res = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-type': 'application/json',
+                    },
+                    body: data,
+                });
 
-            fetch('server.php', {
-                method: 'POST',
-                headers: {
-                    'Content-type': 'application/json',
-                },
-                body: JSON.stringify(obj),
-            })
-            .then((data) => {
+                return await res.json();
+            }
+            
+            postData('http://localhost:3000/emails', json)
+            .then(() => {
                 modalEmail.textContent = message.access;
                 showEmailModal();
-                
             })
             .catch(() => {
                 modalEmail.textContent = message.fail;

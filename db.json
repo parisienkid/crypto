@@ -1,0 +1,36 @@
+{
+  "emails": [
+    {
+      "email": "danyaboickov@icloud.com",
+      "id": 1
+    },
+    {
+      "email": "danila.boickov@yandex.ru",
+      "id": 2
+    },
+    {
+      "email": "danila.boickov@yandex.ru",
+      "id": 3
+    },
+    {
+      "email": "danila.boickov@yandex.ru",
+      "id": 4
+    },
+    {
+      "email": "danyaboickov@icloud.com",
+      "id": 5
+    },
+    {
+      "email": "danyaboickov@icloud.com",
+      "id": 6
+    },
+    {
+      "email": "danyaboickov@icloud.com",
+      "id": 7
+    },
+    {
+      "email": "danila.boickov@yandex.ru",
+      "id": 8
+    }
+  ]
+}
