@@ -57,8 +57,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function updateRevenue() {
         if (inputHash.value != '') {
-            tradeETH.textContent = `${tradeOptions.ratio * inputHash.value} `;
-            trade__USD.textContent = `$${tradeETH.textContent * tradeOptions.usdValue}`;
+            tradeETH.textContent = `${(tradeOptions.ratio * inputHash.value).toFixed(4)} ETH`;
+            trade__USD.textContent = `$${(tradeETH.textContent.replace(/ETH/i, '')  * tradeOptions.usdValue).toFixed()}`;
         } else {
             tradeETH.textContent = 'Enter data';
             trade__USD.textContent = '($0)';
@@ -75,10 +75,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
-
-
-
     // menu 
 
     const menu = document.querySelector('.menu');
@@ -89,6 +85,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const header = document.querySelector('.header'),
           hamburger = header.querySelector('.header__hamburger');
+
+    let scrollTopNow;
 
     function updateNavbar() {
         if (document.documentElement.clientWidth > 900) {
