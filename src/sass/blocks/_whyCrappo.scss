@@ -127,9 +127,18 @@
         }
         @media (max-width: 899px) {
             flex-direction: column;
-            margin-top: 0px;
+            margin-top: 60px;
         }
-        svg {
+
+    }
+    &__illus {
+        width: 50%;
+        @media (max-width: 899px) {
+            flex-direction: column;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+        img {
             width: 100%;
         }
     }

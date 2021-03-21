@@ -58,7 +58,8 @@
             width: 540px;
         }
         @media (max-width: 599px) {
-            width: 286px;
+            width: 100%;
+            top: -213px;
         }
     }
     &__hashrate {
@@ -222,7 +223,7 @@
                 margin-bottom: 30px;
             }
             @media (max-width: 599px) {
-                width: 288px;
+                width: 100%;
                 height: 461px;
             }
             &:hover {
@@ -335,7 +336,7 @@
     .bluecolor {
         color: #0D0D2B;
         @media (max-width: 599px) {
-            padding-top: 80px;
+            padding-top: 370px;
             font-size: 22px;
             line-height: 27px;
         }

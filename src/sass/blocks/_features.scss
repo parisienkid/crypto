@@ -118,12 +118,12 @@
         &1 {
             @media (max-width: 1200px) {
                 transform: scale(0.8);
-                margin-right: -50px;
+                margin-top: 20px;
             }
-            @media (max-width: 900px) {
+            @media (max-width: 899px) {
                 margin-right: 0px;
             }
-            @media (max-width: 600px) {
+            @media (max-width: 599px) {
                 display: none;
             }
         }
@@ -136,10 +136,10 @@
                     left: 0;
                 }
             }
-            @media (max-width: 900px) {
+            @media (max-width: 899px) {
                 margin-top: 50px;
             }
-            @media (max-width: 600px) {
+            @media (max-width: 599px) {
                 display: none;
             }
         }
@@ -148,10 +148,10 @@
                 transform: scale(0.71052631578);
                 margin-right: -88px;
             }
-            @media (max-width: 900px) {
+            @media (max-width: 899px) {
                 margin-right: 0px;
             }
-            @media (max-width: 600px) {
+            @media (max-width: 599px) {
                 display: none;
             }
         }
