@@ -15,7 +15,7 @@ function animScroll() {
 
     window.addEventListener('scroll', listener);
 
-    function listener() {
+    function anim() {
         animItems.forEach((item) => {
             if (isPartiallyVisible(item)){
                 if (item.classList.contains('anim4')) {
@@ -31,19 +31,11 @@ function animScroll() {
         });
     }
 
-    animItems.forEach((item) => {
-        if (isPartiallyVisible(item)){
-            if (item.classList.contains('anim4')) {
-                item.classList.add('animate__fadeInRight');
-            } else if (item.classList.contains('anim5')){
-                item.classList.add('animate__fadeInLeft');
-            } else if (item.classList.contains('anim6')){
-                item.classList.add('animate__fadeInRight');
-            } else {
-                item.classList.add('animate__fadeInUp');
-            }
-        }
-    });
+    function listener() {
+        anim();
+    }
+
+    anim();
 }
 
 export default animScroll;
