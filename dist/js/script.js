@@ -297,7 +297,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let bottom = elementBoundary.bottom;
         let height = elementBoundary.height;
      
-        return ((top <= window.innerHeight - 80) && (height + window.innerHeight >= bottom));
+        return ((top <= window.innerHeight - 100) && (height + window.innerHeight >= bottom));
     }
 
     window.addEventListener('scroll', listener);
@@ -305,8 +305,12 @@ window.addEventListener('DOMContentLoaded', () => {
     function listener() {
         animItems.forEach((item) => {
             if (isPartiallyVisible(item)){
-                if (item.classList.contains('animate__fadeInUp')){
-                    animItemsI += 1;
+                if (item.classList.contains('anim4')) {
+                    item.classList.add('animate__fadeInRight');
+                } else if (item.classList.contains('anim5')){
+                    item.classList.add('animate__fadeInLeft');
+                } else if (item.classList.contains('anim6')){
+                    item.classList.add('animate__fadeInRight');
                 } else {
                     item.classList.add('animate__fadeInUp');
                 }
@@ -316,7 +320,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
     animItems.forEach((item) => {
         if (isPartiallyVisible(item)){
-            item.classList.add('animate__fadeInUp');
+            if (item.classList.contains('anim4')) {
+                item.classList.add('animate__fadeInRight');
+            } else if (item.classList.contains('anim5')){
+                item.classList.add('animate__fadeInLeft');
+            } else if (item.classList.contains('anim6')){
+                item.classList.add('animate__fadeInRight');
+            } else {
+                item.classList.add('animate__fadeInUp');
+            }
         }
     });
 

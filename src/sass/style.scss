@@ -99,26 +99,6 @@ button {
     }
 }
 
-.anim {
-    opacity: 0;
-}
-
-
-
-.anim2 {
-    animation-delay: .2s;
-    @media (max-width: 599px) {
-        animation-delay: 0s;
-    }
-}
-
-.anim3 {
-    animation-delay: .4s;
-    @media (max-width: 599px) {
-        animation-delay: 0s;
-    }
-}
-
 
 
 
