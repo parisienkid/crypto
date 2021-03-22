@@ -196,18 +196,17 @@ window.addEventListener('DOMContentLoaded', () => {
                     body: data,
                 });
 
+                if (!res.ok) {
+                    throw new Error(`Could not fetch ${url}, status ${res.status}`);
+                }
+
                 return await res.json();
             }
             
             postData('http://localhost:3000/emails1', json)
-            .then((data) => {
-                if (!data.ok) {
-                    modalEmail.textContent = message.fail;
-                    showEmailModal();
-                } else {
-                    modalEmail.textContent = message.access;
-                    showEmailModal();
-                }
+            .then(() => {
+                modalEmail.textContent = message.access;
+                showEmailModal();
             })
             .catch(() => {
                 modalEmail.textContent = message.fail;
