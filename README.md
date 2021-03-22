@@ -1,5 +1,7 @@
 Crypto lending
 
+Practice HTML + CSS + JS
+
 Updates:
 
   13.03.2021 - 4
@@ -11,4 +13,6 @@ Updates:
   19.03.2021 - 1
   20.03.2021 - 1
   21.03.2021 - 2
-  22.03.2021 - 5
+  22.03.2021 - 6
+  
+  End
