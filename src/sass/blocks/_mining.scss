@@ -70,6 +70,7 @@
         padding-bottom: 5px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         width: 66.66%;
+        z-index: 200;
         &::placeholder {
             font-size: 16px;
             line-height: 175%;

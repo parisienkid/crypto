@@ -199,10 +199,15 @@ window.addEventListener('DOMContentLoaded', () => {
                 return await res.json();
             }
             
-            postData('http://localhost:3000/emails', json)
-            .then(() => {
-                modalEmail.textContent = message.access;
-                showEmailModal();
+            postData('http://localhost:3000/emails1', json)
+            .then((data) => {
+                if (!data.ok) {
+                    modalEmail.textContent = message.fail;
+                    showEmailModal();
+                } else {
+                    modalEmail.textContent = message.access;
+                    showEmailModal();
+                }
             })
             .catch(() => {
                 modalEmail.textContent = message.fail;
