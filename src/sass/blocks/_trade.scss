@@ -305,6 +305,9 @@
             color: #828282;
             margin-top: 16px;
             transition: .3s;
+            @media (max-width: 599px) {
+                height: 84px;
+            }
         }
         &__button {
             margin-top: 25px;

@@ -13,100 +13,89 @@
       "id": 3
     },
     {
-      "email": "danila.boickov@yandex.ru",
+      "email": "ewf@wge",
       "id": 4
     },
     {
-      "email": "danyaboickov@icloud.com",
+      "email": "f2@af",
+      "id": 5
+    }
+  ],
+  "reg": [
+    {
+      "emailReg": "wqd@u",
+      "passReg": "wrew",
+      "id": 1
+    },
+    {
+      "emailReg": "wqd@u",
+      "passReg": "wrew",
+      "id": 2
+    },
+    {
+      "emailReg": "wqd@u",
+      "passReg": "qr",
+      "id": 3
+    },
+    {
+      "emailReg": "wqd@u",
+      "passReg": "rq",
+      "id": 4
+    },
+    {
+      "emailReg": "wqd@u",
+      "passReg": "few",
       "id": 5
     },
     {
-      "email": "danyaboickov@icloud.com",
+      "emailReg": "wqd@u",
+      "passReg": "ewf",
       "id": 6
     },
     {
-      "email": "danyaboickov@icloud.com",
+      "emailReg": "wqd@u",
+      "passReg": ", ",
       "id": 7
     },
     {
-      "email": "danila.boickov@yandex.ru",
+      "emailReg": "wqd@u",
+      "passReg": "ew",
       "id": 8
     },
     {
-      "email": "danyaboickov@icloud.com",
+      "emailReg": "wqd@u",
+      "passReg": ",",
       "id": 9
     },
     {
-      "email": "danila.boickov@yandex.ru",
+      "emailReg": "wqd@u",
+      "passReg": "s",
       "id": 10
     },
     {
-      "email": "danyaboickov@icloud.com",
+      "emailReg": "wqd@u",
+      "passReg": "wef",
       "id": 11
     },
     {
-      "email": "danyaboickov@icloud.com",
+      "emailReg": "wqd@u",
+      "passReg": "d",
       "id": 12
     },
     {
-      "email": "danyaboickov@icloud.com",
+      "emailReg": "wqd@u",
+      "passReg": "wef",
       "id": 13
     },
     {
-      "email": "danyaboickov@icloud.com",
+      "emailReg": "reg@tw",
+      "passReg": "wef",
       "id": 14
     },
     {
-      "email": "danyaboickov@icloud.com",
+      "emailReg": "wqd@u",
+      "passReg": "qrqw",
       "id": 15
-    },
-    {
-      "email": "danyaboickov@icloud.com",
-      "id": 16
-    },
-    {
-      "email": "danyaboickov@icloud.com",
-      "id": 17
-    },
-    {
-      "email": "danyaboickov@icloud.com",
-      "id": 18
-    },
-    {
-      "email": "danyaboickov@icloud.com",
-      "id": 19
-    },
-    {
-      "email": "danila.boickov@yandex.ru",
-      "id": 20
-    },
-    {
-      "email": "danila.boickov@yandex.ru",
-      "id": 21
-    },
-    {
-      "email": "danila.boickov@yandex.ru",
-      "id": 22
-    },
-    {
-      "email": "danyaboickov@icloud.com",
-      "id": 23
-    },
-    {
-      "email": "danyaboickov@icloud.com",
-      "id": 24
-    },
-    {
-      "email": "danila.boickov@yandex.ru",
-      "id": 25
-    },
-    {
-      "email": "danyaboickov@icloud.com",
-      "id": 26
-    },
-    {
-      "email": "danyaboickov@icloud.com",
-      "id": 27
     }
   ]
 }

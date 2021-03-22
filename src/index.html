@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.min.css">
@@ -25,7 +25,7 @@
                 <li class="header__item"><a href="#">About</a></li>
                 <li class="header__item"><a href="#">Contact</a></li>
                 <li class="header__item"><a href="#">Login</a></li>
-                <li class="header__item"><button>Register</button></li>
+                <li class="header__item"><button data-reg>Register</button></li>
                 <li class="header__hamburger hamburger_out">
                     <span></span>
                     <span></span>
@@ -44,14 +44,23 @@
                     <li class="menu__item"><a href="#">About</a></li>
                     <li class="menu__item"><a href="#">Contact</a></li>
                     <li class="menu__item"><a href="#">Login</a></li>
-                    <li class="menu__item"><button class="bgColorMenuRegister">Register</button></li>
+                    <li class="menu__item"><button data-reg class="bgColorMenuRegister">Register</button></li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div class="modal__email">
-        
+    </div>
+
+    <div class="modal__reg">
+        <form class="modal__reg-wrapper">
+            <div class="modal__reg-close">×</div>
+            <div class="modal__reg-title">Hello!</div>
+            <input placeholder="Enter your email" class="modal__reg-email" name="emailReg" required type="email">
+            <input placeholder="Enter your password" class="modal__reg-pass" name="passReg" required type="password">
+            <button class="button">Register</button>
+        </form>
     </div>
 
     <div class="intro">
@@ -67,7 +76,7 @@
                 <div class="intro__subtitle">
                     Buy and sell cryptocurrencies, trusted by 10M wallets <br> with over $30 billion in transactions.
                 </div>
-                <button class="intro__button">
+                <button data-reg class="intro__button">
                     <div class="intro__button-text">Try for FREE</div>
                     <div class="intro__button-sub-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="white"/><path d="M14.5 20.9999C14.3684 21.0007 14.2379 20.9755 14.1161 20.9257C13.9943 20.8759 13.8834 20.8026 13.79 20.7099C13.6963 20.617 13.6219 20.5064 13.5711 20.3845C13.5203 20.2626 13.4942 20.1319 13.4942 19.9999C13.4942 19.8679 13.5203 19.7372 13.5711 19.6154C13.6219 19.4935 13.6963 19.3829 13.79 19.2899L17.1 15.9999L13.92 12.6899C13.7337 12.5026 13.6292 12.2491 13.6292 11.9849C13.6292 11.7207 13.7337 11.4673 13.92 11.2799C14.013 11.1862 14.1236 11.1118 14.2454 11.061C14.3673 11.0103 14.498 10.9841 14.63 10.9841C14.762 10.9841 14.8927 11.0103 15.0146 11.061C15.1364 11.1118 15.247 11.1862 15.34 11.2799L19.2 15.2799C19.3832 15.4669 19.4859 15.7182 19.4859 15.9799C19.4859 16.2417 19.3832 16.493 19.2 16.6799L15.2 20.6799C15.1102 20.7769 15.0022 20.855 14.882 20.91C14.7619 20.9649 14.632 20.9955 14.5 20.9999Z" fill="#3671E9"/></svg></div>
                 </button>
@@ -80,7 +89,7 @@
     </div>
     <section class="whyCrappo">
         <div class="container">
-            <div class="whyCrappo__numbers">
+            <div class="whyCrappo__numbers anim animate__animated">
                 <div class="whyCrappo__numbers-item">
                     <div class="whyCrappo__numbers-logo"><img src="img/Icon1.svg" alt="icon1"></div>
                     <div class="whyCrappo__numbers-descr">
@@ -104,14 +113,14 @@
                 </div>
             </div>
 
-            <div class="whyCrappo__main">
+            <div class="whyCrappo__main anim animate__animated">
                 <div class="whyCrappo__illus">
                     <img src="img/Illustrations2.svg" alt="illus2">
                 </div>
                 <div class="whyCrappo__text">
                     <h2 class="whyCrappo__title">Why you should choose CRAPPO</h2>
                     <div class="whyCrappo__subtitle">Experience the next generation cryptocurrency <br> platform. No financial borders, extra fees, and fake <br> reviews.</div>
-                    <button class="whyCrappo__button">Learn More</button>
+                    <button data-reg class="whyCrappo__button">Learn More</button>
                 </div>
             </div>
 
@@ -120,11 +129,11 @@
         <div class="whyCrappo__bg-line2"></div>
     </section>
 
-    <section class="trade">
+    <section class="trade anim animate__animated">
         <div class="trade__check">
             <div class="container">
                 <h2 class="trade__title">Check how much you can earn</h2>
-            <div class="trade__subtitle">Let’s check your hash rate to see how much you will earn today, <br> Exercitation veniam consequat sunt nostrud amet.</div>
+                <div class="trade__subtitle">Let’s check your hash rate to see how much you will earn today, <br> Exercitation veniam consequat sunt nostrud amet.</div>
             </div>
         </div>
         <div class="trade__currencies">
@@ -150,9 +159,9 @@
                    <div class="trade__eth"><span class="trade__ethTXT">Enter data</span> <span class="usd">($0)</span></div>
                    <div class="trade__revenue">Revenue will change based on mining difficulty and Ethereum price.</div>
                </div>
-            <div class="trade__title bluecolor">Trade securely and market the high <br> growth cryptocurrencies.</div>
+            <div class="trade__title bluecolor anim animate__animated">Trade securely and market the high <br> growth cryptocurrencies.</div>
             <div class="coins">
-                <div class="coins__item">
+                <div class="coins__item anim anim1 animate__animated">
                     <div class="coins__logo btc__bg">
                         <img src="img/Iconbtc.svg" alt="btc">
                     </div>
@@ -162,9 +171,9 @@
                         <path d="M28.9999 42.0002C28.7367 42.0017 28.4758 41.9512 28.2321 41.8517C27.9885 41.7522 27.7668 41.6055 27.5799 41.4202C27.3925 41.2342 27.2437 41.013 27.1422 40.7693C27.0406 40.5256 26.9883 40.2642 26.9883 40.0002C26.9883 39.7362 27.0406 39.4747 27.1422 39.231C27.2437 38.9873 27.3925 38.7661 27.5799 38.5802L34.1999 32.0002L27.8399 25.3802C27.4674 25.0054 27.2584 24.4985 27.2584 23.9702C27.2584 23.4418 27.4674 22.9349 27.8399 22.5602C28.0259 22.3727 28.2471 22.2239 28.4908 22.1224C28.7345 22.0209 28.9959 21.9686 29.2599 21.9686C29.524 21.9686 29.7854 22.0209 30.0291 22.1224C30.2728 22.2239 30.494 22.3727 30.6799 22.5602L38.3999 30.5602C38.7664 30.934 38.9717 31.4367 38.9717 31.9602C38.9717 32.4837 38.7664 32.9863 38.3999 33.3602L30.3999 41.3602C30.2204 41.554 30.0043 41.7104 29.764 41.8203C29.5237 41.9301 29.264 41.9913 28.9999 42.0002Z" fill="#3671E9"/>
                         </svg>
                     </div>
-                    <button class="coins__hover-button">Start mining</button>
+                    <button data-reg class="coins__hover-button">Start mining</button>
                 </div>
-                <div class="coins__item">
+                <div class="coins__item anim anim2 animate__animated">
                     <div class="coins__logo eth__bg">
                         <img src="img/Iconeth.svg" alt="eth">
                     </div>
@@ -174,9 +183,9 @@
                         <path d="M28.9999 42.0002C28.7367 42.0017 28.4758 41.9512 28.2321 41.8517C27.9885 41.7522 27.7668 41.6055 27.5799 41.4202C27.3925 41.2342 27.2437 41.013 27.1422 40.7693C27.0406 40.5256 26.9883 40.2642 26.9883 40.0002C26.9883 39.7362 27.0406 39.4747 27.1422 39.231C27.2437 38.9873 27.3925 38.7661 27.5799 38.5802L34.1999 32.0002L27.8399 25.3802C27.4674 25.0054 27.2584 24.4985 27.2584 23.9702C27.2584 23.4418 27.4674 22.9349 27.8399 22.5602C28.0259 22.3727 28.2471 22.2239 28.4908 22.1224C28.7345 22.0209 28.9959 21.9686 29.2599 21.9686C29.524 21.9686 29.7854 22.0209 30.0291 22.1224C30.2728 22.2239 30.494 22.3727 30.6799 22.5602L38.3999 30.5602C38.7664 30.934 38.9717 31.4367 38.9717 31.9602C38.9717 32.4837 38.7664 32.9863 38.3999 33.3602L30.3999 41.3602C30.2204 41.554 30.0043 41.7104 29.764 41.8203C29.5237 41.9301 29.264 41.9913 28.9999 42.0002Z" fill="#3671E9"/>
                         </svg>
                     </div>
-                    <button class="coins__hover-button">Start mining</button>
+                    <button data-reg class="coins__hover-button">Start mining</button>
                 </div>
-                <div class="coins__item">
+                <div class="coins__item anim anim3 animate__animated">
                     <div class="coins__logo ltc__bg">
                         <img src="img/Iconltc.svg" alt="ltc">
                     </div>
@@ -186,7 +195,7 @@
                         <path d="M28.9999 42.0002C28.7367 42.0017 28.4758 41.9512 28.2321 41.8517C27.9885 41.7522 27.7668 41.6055 27.5799 41.4202C27.3925 41.2342 27.2437 41.013 27.1422 40.7693C27.0406 40.5256 26.9883 40.2642 26.9883 40.0002C26.9883 39.7362 27.0406 39.4747 27.1422 39.231C27.2437 38.9873 27.3925 38.7661 27.5799 38.5802L34.1999 32.0002L27.8399 25.3802C27.4674 25.0054 27.2584 24.4985 27.2584 23.9702C27.2584 23.4418 27.4674 22.9349 27.8399 22.5602C28.0259 22.3727 28.2471 22.2239 28.4908 22.1224C28.7345 22.0209 28.9959 21.9686 29.2599 21.9686C29.524 21.9686 29.7854 22.0209 30.0291 22.1224C30.2728 22.2239 30.494 22.3727 30.6799 22.5602L38.3999 30.5602C38.7664 30.934 38.9717 31.4367 38.9717 31.9602C38.9717 32.4837 38.7664 32.9863 38.3999 33.3602L30.3999 41.3602C30.2204 41.554 30.0043 41.7104 29.764 41.8203C29.5237 41.9301 29.264 41.9913 28.9999 42.0002Z" fill="#3671E9"/>
                         </svg>
                     </div>
-                    <button class="coins__hover-button">Start mining</button>
+                    <button data-reg class="coins__hover-button">Start mining</button>
                 </div>
             </div>
            </div>
@@ -196,7 +205,7 @@
     <section class="features">
         <div class="features__top-bg"></div>
         <div class="features__bottom-bg"></div>
-        <div class="container">
+        <div class="container anim animate__animated">
             <h2 class="features__title">Market sentiments, portfolio, and run the infrastructure of your choice</h2>
             <div class="features__item-wrapper">
                 <div class="features__item-text features__item-text_1">
@@ -206,7 +215,7 @@
                     <div class="features__item-descr">
                         Get full statistic information about the behaviour of buyers and sellers will help you to make the decision. 
                     </div>
-                    <button class="features__item-button button">
+                    <button data-reg class="features__item-button button">
                         Learn More
                     </button>
                 </div>
@@ -241,7 +250,7 @@
                     <div class="features__item-descr">
                         View all mining related information in realtime, at any point at any location and decide which polls you want to mine in.
                     </div>
-                    <button class="features__item-button button">
+                    <button data-reg class="features__item-button button">
                         Learn More
                     </button>
                 </div>
@@ -254,7 +263,7 @@
                     <div class="features__item-descr">
                         Use advanced analytical tools. Clear TradingView charts let you track current and historical profit investments.
                     </div>
-                    <button class="features__item-button button">
+                    <button data-reg class="features__item-button button">
                         Learn More
                     </button>
                 </div>
@@ -269,7 +278,7 @@
     </section>
     <section class="mining">
         <div class="container">
-        <form action="#" class="mining__form">
+        <form data-news="news" action="#" class="mining__form anim animate__animated">
             <div class="mining__text">
                 <div class="mining__title">Start mining now</div>
                 <div class="mining__descr">Join now with CRAPPO to get the latest news and start mining now</div>

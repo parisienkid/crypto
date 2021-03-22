@@ -1,9 +1,9 @@
 .opacityIn {
-    animation: opacityIn 1s forwards;
+    animation: opacityIn .5s forwards;
 }
 
 .opacityOut {
-    animation: opacityOut 1s forwards;
+    animation: opacityOut .5s forwards;
 }
 
 @keyframes opacityIn {

@@ -22,4 +22,81 @@
             transform: translateX(50%);
         }
     }
+    &__reg {
+        background-color: rgba(0, 0, 0, .7);
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top:0;
+        z-index: 2000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        opacity: 0;
+        &-wrapper {
+            background: #fbfcfe;
+            box-shadow: 0 20px 200px rgba(57,23, 119, .05);
+            border-radius: 16px;
+            padding: 48px;
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            @media (max-width: 700px) {
+                width: 70%;
+            }
+            @media (max-width: 600px) {
+                width: 90%;
+            }
+        }
+        &-close {
+            display: block;
+            padding: 5px;
+            height: 40px;
+            font-size: 30px;
+            line-height: 30px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #0D0D2B;
+            cursor: pointer;
+            text-align: center;
+            width: 40px;
+            transition: .2s;
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+        &-title {
+            font-size: 32px;
+            line-height: 150%;
+            color: #0D0D2B;
+            margin-bottom: 40px;
+        }
+        input {
+            border: none;
+            position: relative;
+            border-bottom: 1px solid #E0E0E0;
+            background-color: inherit;
+            padding: 7px 0;
+            color: #000;
+            outline: none;
+            width: 120px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            align-items: center;
+            margin-bottom: 40px;
+            width: 300px;
+            &::placeholder {
+                color: rgba(0, 0, 0, .7);
+            }
+            @media (max-width: 700px) {
+                width: 100%;
+            }
+        }
+    }
 }

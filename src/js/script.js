@@ -2,8 +2,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Dropdown in Trade Section
 
-    'use strict';
-
     const dropdownParent = document.querySelector('.trade__th'),
           hashrate = dropdownParent.querySelector('.trade__hr'),
           dropdown = document.querySelector('.trade__dropdown');
@@ -160,9 +158,60 @@ window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 modalEmail.classList.remove('displayblock');
                 modalEmail.classList.remove('opacityOut');
-            }, 1000);
+            }, 500);
         }, 4000);
     }
+
+    const modalReg = document.querySelector('.modal__reg'),
+          modalRegClose = modalReg.querySelector('.modal__reg-close'),
+          buttonsForOpenModalReg = document.querySelectorAll('[data-reg]');
+    
+
+    buttonsForOpenModalReg.forEach(item => {
+        item.addEventListener('click', () => {
+            showRegModal();
+        });
+    });
+
+    modalRegClose.addEventListener('click', () => {
+        removeReg();
+    });
+    
+    
+    function showRegModal() {
+        modalReg.classList.add('displayflex');
+        modalReg.classList.add('opacityIn');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function removeReg() {
+        modalReg.classList.remove('opacityIn');
+        modalReg.classList.add('opacityOut');
+        setTimeout(() => {
+            modalReg.classList.remove('displayflex');
+            document.body.style.overflow = 'visible';
+            modalReg.classList.remove('opacityOut');
+        }, 500);
+    }
+
+    function regis() {
+        function toggle(text) {
+            modalReg.querySelector('.modal__reg-title').textContent = text;
+            modalReg.querySelectorAll('input').forEach(item => {item.classList.toggle('displaynone');});
+            modalReg.querySelector('button').classList.toggle('displaynone');
+        }
+        toggle('Yay, you are registered!');
+        setTimeout(() => {
+            removeReg();
+            setTimeout(() => {
+                toggle('Hello!');
+            }, 500);
+        }, 2000);
+    }
+
+
+
+    
 
 
     // form
@@ -170,7 +219,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const forms = document.querySelectorAll('form');
 
     forms.forEach(item => {
-        postData(item);
+        if (item.getAttribute('data-news') == 'news') {
+            postData(item, 'news');
+        } else {
+            postData(item, 'reg');
+        }
     });
 
     const message = {
@@ -178,7 +231,7 @@ window.addEventListener('DOMContentLoaded', () => {
         fail: 'Ooops, something went wrong',
     }
 
-    function postData(form) {
+    function postData(form, name) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
@@ -203,21 +256,72 @@ window.addEventListener('DOMContentLoaded', () => {
                 return await res.json();
             }
             
-            postData('http://localhost:3000/emails1', json)
-            .then(() => {
-                modalEmail.textContent = message.access;
-                showEmailModal();
-            })
-            .catch(() => {
-                modalEmail.textContent = message.fail;
-                showEmailModal();
-            })
-            .finally(() => {
-                form.reset();
-            });
+            if (name == 'news') {
+                postData('http://localhost:3000/emails', json)
+                .then(() => {
+                    modalEmail.textContent = message.access;
+                    showEmailModal();
+                })
+                .catch(() => {
+                    modalEmail.textContent = message.fail;
+                    showEmailModal();
+                })
+                .finally(() => {
+                    form.reset();
+                });
+            } else if (name == 'reg') {
+                postData('http://localhost:3000/reg', json)
+                .then(() => {
+                    regis();
+                })
+                .catch(() => {
+                    
+                })
+                .finally(() => {
+                    form.reset();
+                });
+            }
 
             
         });
     }
+
+    // scrollAnim
+    
+    const animItems = document.querySelectorAll('.anim');
+    
+
+    function isPartiallyVisible(el) {
+        let elementBoundary = el.getBoundingClientRect();     
+        let top = elementBoundary.top;
+        let bottom = elementBoundary.bottom;
+        let height = elementBoundary.height;
+     
+        return ((top <= window.innerHeight - 80) && (height + window.innerHeight >= bottom));
+    }
+
+    window.addEventListener('scroll', listener);
+
+    function listener() {
+        animItems.forEach((item) => {
+            if (isPartiallyVisible(item)){
+                if (item.classList.contains('animate__fadeInUp')){
+                    animItemsI += 1;
+                } else {
+                    item.classList.add('animate__fadeInUp');
+                }
+            }
+        });
+    }
+
+    animItems.forEach((item) => {
+        if (isPartiallyVisible(item)){
+            item.classList.add('animate__fadeInUp');
+        }
+    });
+
+    
+
+
 
 });
